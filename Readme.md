@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Vassa Morozova](https://up.htmlacademy.ru/htmlcss/28/user/1259723).
-* Наставник: [Магомед Кандаев].
+* Наставник: [Магомед Кандаев](https://htmlacademy.ru/profile/magomedkandaev).
 
 ---
 
