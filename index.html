@@ -29,7 +29,7 @@
   </header>
   <main>
     <section>
-      <h1>Sedona</h1>
+      <h1 class="visually-hidden">Sedona</h1>
       <img src="img/intro-welcome.svg" width="456" height="350" alt="Sedona">
     </section>
     <section>
@@ -98,23 +98,40 @@
     </div>
     <ul>
       <li>
-        <a href="#">Twitter</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
       </li>
       <li>
-        <a href="#">FaceBook</a>
+        <a href="#" aria-label="FaceBook">FaceBook</a>
       </li>
       <li>
-        <a href="#">Youtube</a>
+        <a href="#" aria-label="Youtube">Youtube</a>
       </li>
     </ul>
     <p>
       Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив «HTML и CSS. Профессиональная вёрстка сайтов»">HTML Academy</a>
     </p>
   </footer>
   <section>
-    <!--Здесь будет форма для поска гостиницы-->
-    <button type="button">Найти</button>
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <div>
+        <label for="arrivalDate">Дата заезда:</label>
+        <input id="arrivalDate" type="text" placeholder="24 апреля 2017" name="Arrival date">
+      </div>
+      <div>
+        <label for="dateOfDeparture">Дата выезда:</label>
+        <input id="dateOfDeparture" type="text" placeholder="4 июля 2017" name="Date of departure">
+      </div>
+      <div>
+        <label for="adults">Взрослые:</label>
+        <input id="adults" type="number" min="1" max="10" step="1" value="2" name="Number of adults">
+      </div>
+      <div>
+        <label for="children">Дети:</label>
+        <input id="children" type="number" min="0" max="10" step="1" value="0" name="Number of children">
+      </div>
+      <button type="submit">Найти</button>
+    </form>
   </section>
 </div>
 </body>
