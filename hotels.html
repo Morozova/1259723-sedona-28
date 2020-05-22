@@ -30,16 +30,49 @@
   <main>
     <h1 class="visually-hidden">Гостиницы</h1>
     <section>
-      <div>
-        <span>Инфраструктура:</span>
-      </div>
-      <div>
-        <span>Тип жилья:</span>
-      </div>
-      <div>
-        <span>Стоимость в сутки (Р):</span>
-        <button type="button">Показать</button>
-      </div>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <input id="choosePool" type="checkbox" name="Pool" checked>
+              <label for="choosePool">Бассейн</label>
+            </li>
+            <li>
+              <input id="chooseParking" type="checkbox" name="Parking">
+              <label for="chooseParking">Парковка</label>
+            </li>
+            <li>
+              <input id="chooseWiFi" type="checkbox" name="Wi-Fi">
+              <label for="chooseWiFi">Wi-Fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <input id="typeHotel" type="checkbox" name="Hotel" checked>
+              <label for="typeHotel">Гостиница</label>
+            </li>
+            <li>
+              <input id="typeMotel" type="checkbox" name="Motel" checked>
+              <label for="typeMotel">Мотель</label>
+            </li>
+            <li>
+              <input id="typeApartments" type="checkbox" name="Apartments" checked>
+              <label for="typeApartments">Апартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Стоимость в сутки (Р):</legend>
+          <span>от 0</span>
+          <span>до 3000</span>
+          <input type="range" min="0" max="3000" step="10" name="Price per day">
+        </fieldset>
+        <button type="submit">Показать</button>
+      </form>
     </section>
     <section>
       <div>
@@ -180,7 +213,8 @@
     </ul>
     <p>
       Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Интенсив «HTML и CSS. Профессиональная вёрстка сайтов»">HTML Academy</a>
+      <a href="https://htmlacademy.ru/intensive/htmlcss"
+         aria-label="Интенсив «HTML и CSS. Профессиональная вёрстка сайтов»">HTML Academy</a>
     </p>
   </footer>
 </div>
