@@ -6,6 +6,7 @@
   --basic-gray: #333333;
   --basic-light-gray: #F2F2F2;
   --basic-brown: #766357;
+  --basic-graphite-gray: #666666;
   --basic-blue: #81B3D2;
   --background-gray: #F2F2F2;
   --hover-brown: #604E43;
@@ -49,6 +50,7 @@ img{
   text-transform: uppercase;
   color: var(--basic-white);
   border: none;
+  font-weight: 700;
 }
 
 .button:hover,
@@ -84,6 +86,9 @@ img{
 }
 
 .main-title::after{
+  content: '';
+  display: block;
+  height: 57px;
   content: url("../img/intro-mask.svg");
 }
 
@@ -136,12 +141,34 @@ img{
   padding: 5px;
 }
 
+.contact{
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+
 /*Hotels*/
 
 /*Search results*/
 
 .hotel-list li{
   list-style: none;
+}
+
+.hotel-list h3{
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotel-link{
+  font-weight: 700;
+}
+
+.hotel-rating{
+  color: var(--basic-graphite-gray);
+  background: var(--background-gray);
 }
 
 .hotel-link,
