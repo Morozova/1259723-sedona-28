@@ -9,6 +9,8 @@
   --basic-graphite-gray: #666666;
   --basic-blue: #81B3D2;
   --background-gray: #F2F2F2;
+  --background-light-gray: #EEEEEE;
+  --background-medium-gray: #EBEBEB;
   --hover-brown: #604E43;
   --active-brown: #503E33;
   --hover-blue: #669EC0;
@@ -38,6 +40,11 @@ body{
 
 a{
   text-decoration: none;
+  color: var(--basic-black);
+}
+
+li{
+  list-style: none;
 }
 
 img{
@@ -45,40 +52,83 @@ img{
   height: auto;
 }
 
-.button{
-  background: var(--basic-brown);
-  text-transform: uppercase;
-  color: var(--basic-white);
-  border: none;
+h3,
+h4{
+  font-size: 21px;
   font-weight: 700;
 }
 
-.button:hover,
-.button:focus{
-  background: var(--hover-brown);
+.button {
+  text-transform: uppercase;
   border: none;
+  color: var(--basic-white);
+  font-weight: 700;
 }
 
-.button:active{
-  background: var(--active-brown);
-  border: none;
+.main-search .button{
+  font-size: 21px;
+  line-height: 26px;
 }
 
-/*Navigation*/
+.btn-blue{
+  background-color: var(--basic-blue);
+}
 
-.main-navigation{
+.btn-blue:hover,
+.btn-blue:focus{
+  background-color: var(--hover-blue);
+}
+
+.btn-blue:active{
+  background-color: var(--active-blue);
+}
+
+.btn-brown{
+  background-color: var(--basic-brown);
+}
+
+.btn-brown:hover,
+.btn-brown:focus{
+  background-color: var(--hover-brown);
+}
+
+.btn-brown:active{
+  background-color: var(--active-brown);
+}
+
+.link:hover,
+.link:focus{
+  color: var(--basic-blue);
+}
+
+.link:active{
+  opacity: 0.3;
+}
+
+/*Header*/
+
+.site-navigation a{
   line-height: 26px;
   font-weight: 700;
 }
 
-.site-navigation{
-  list-style: none;
+a.active-link{
+  color: var(--basic-brown);
 }
 
-.site-navigation a{
+/*Footer*/
+
+.main-footer{
+  line-height: 26px;
   color: var(--basic-black);
 }
 
+.contact{
+  font-weight: 700;
+  font-size: 21px;
+}
+
+/*Index*/
 /*Page title*/
 
 .main-title{
@@ -92,7 +142,7 @@ img{
   content: url("../img/intro-mask.svg");
 }
 
-/*Intro*/
+/*Features*/
 
 .intro-title{
   font-size: 21px;
@@ -105,10 +155,17 @@ img{
   line-height: 26px;
 }
 
-.main-features h3,
-.main-features h4{
-  font-size: 21px;
-  font-weight: 700;
+.color-blue{
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.color-gray{
+  background-color: var(--background-light-gray);
+}
+
+.color-gray h3{
+  color: var(--basic-black);
 }
 
 /*Main search*/
@@ -121,49 +178,86 @@ img{
 }
 
 /*Search form*/
-.search-form{
+.hotel-search{
   line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
 }
 
-.search-form input{
+.hotel-search input{
   background: var(--background-gray);
   font: inherit;
   border: none;
 }
 
-
-/*Footer*/
-.main-footer li{
-  list-style: none;
+.hotel-search input:hover{
+  background-color: var(--background-medium-gray);
 }
 
-.social a{
-  padding: 5px;
-}
-
-.contact{
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  color: var(--basic-black);
+.hotel-search input:focus{
+  background-color: var(--basic-white);
+  border: 2px solid #E5E5E5;
 }
 
 /*Hotels*/
+/*Hotel filter*/
 
-/*Search results*/
-
-.hotel-list li{
-  list-style: none;
+.hotel-filter{
+  background: url("../img/background-filter.jpg") no-repeat center;
+  color: var(--basic-white);
 }
 
-.hotel-list h3{
+fieldset{
+  border: none;
+}
+
+.hotel-filter legend{
+  font-size: 16px;
   font-weight: 700;
+}
+
+.filter-button{
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  color: white;
+}
+
+/*Hotel sorting*/
+
+.hotel-sorting{
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--basic-black);
+}
+
+.search-results{
   font-size: 21px;
   line-height: 26px;
+  font-weight: 700;
 }
 
-.hotel-link{
-  font-weight: 700;
+.sorting-button{
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sorting-button:hover,
+.sorting-button:focus{
+  color: var(--basic-blue);
+}
+
+.sorting-button:active{
+  color: var(--basic-black);
+  border-bottom: none;
+}
+
+/*Hotel list*/
+
+.hotel-list h3{
+  line-height: 26px;
 }
 
 .hotel-rating{
@@ -171,27 +265,4 @@ img{
   background: var(--background-gray);
 }
 
-.hotel-link,
-.search-button,
-.social-icon{
-  background: var(--basic-blue);
-  color: var(--basic-white);
-}
-
-.hotel-link:hover,
-.hotel-link:focus,
-.search-button:hover,
-.search-button:focus,
-.social-icon:hover,
-.social-icon:focus{
-  background: var(--hover-blue);
-  border: none;
-}
-
-.hotel-link:active,
-.search-button:active,
-.social-icon:active{
-  background: var(--active-blue);
-  border: none;
-}
 
