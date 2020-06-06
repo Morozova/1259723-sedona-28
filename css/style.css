@@ -19,6 +19,10 @@
 
 /*Global*/
 
+.page{
+  height: 100%;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -36,6 +40,10 @@ body{
   max-width: 1200px;
   margin: auto;
   background-color: var(--basic-white);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 a{
@@ -107,6 +115,30 @@ h4{
 
 /*Header*/
 
+.main-navigation{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.site-navigation{
+  width: auto;
+  padding: 0;
+  grid-column: 1/6;
+  grid-row-start: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-navigation-logo{
+  width: 138px;
+  height: 70px;
+  justify-self: center;
+  grid-column: 3/4;
+  grid-row-start: 1;
+  z-index: 1;
+}
+
 .site-navigation a{
   line-height: 26px;
   font-weight: 700;
@@ -119,8 +151,13 @@ a.active-link{
 /*Footer*/
 
 .main-footer{
+  margin-top: 20px;
+  margin-left: 70px;
+  margin-right: 70px;
   line-height: 26px;
   color: var(--basic-black);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .contact{
@@ -128,11 +165,27 @@ a.active-link{
   font-size: 21px;
 }
 
+.contact p{
+  margin-top: 10px;
+}
+
+.social{
+  display: flex;
+  padding: 0;
+  justify-self: center;
+  align-items: center;
+}
+
 /*Index*/
+
+.main-home-page{
+  display: grid;
+}
 /*Page title*/
 
 .main-title{
   background: url("../img/background.jpg") no-repeat center;
+  text-align: center;
 }
 
 .main-title::after{
@@ -255,6 +308,27 @@ fieldset{
 }
 
 /*Hotel list*/
+
+.hotels{
+  display: grid;
+  gap: 30px;
+  padding: 0;
+}
+
+.hotels li{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.hotel-info div:first-child{
+  margin-right: 20px;
+}
+
+.hotel-info{
+  display: flex;
+}
 
 .hotel-list h3{
   line-height: 26px;
