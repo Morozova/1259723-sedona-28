@@ -43,80 +43,93 @@
       <p class="intro-subtitle">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       <ol class="intro-list">
         <li class="point point-1">
-          <div class="img-city color-blue">
-            <h3>Настоящий городок</h3>
-            <span>-№1-</span>
-            <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+          <div class="row-1 color-blue">
+            <div class="city">
+              <h3>Настоящий<br>
+                городок</h3>
+              <span>-№1-</span>
+              <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            </div>
+            <div class="img-city">
+
+            </div>
           </div>
           <ul class="city-features">
             <li class="point point-1-1">
-              <h4>Жильё</h4>
+              <h4 class="housing">Жильё</h4>
               <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </li>
             <li class="point point-1-2">
-              <h4>Еда</h4>
+              <h4 class="food">Еда</h4>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
             </li>
             <li class="point point-1-3">
-              <h4>Сувениры</h4>
+              <h4 class="souvenirs">Сувениры</h4>
               <p>Не только китайского, но и местного производства!</p>
             </li>
           </ul>
         </li>
-        <li class="point point-2">
-          <div class="color-blue">
-          <h3>Там есть Мост дьявола</h3>
-          <span>-№2-</span>
-          <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+        <li class="point point-2 color-blue">
+          <div class="img-bridge">
+
+          </div>
+          <div>
+            <h3>Там есть<br>
+              Мост дьявола</h3>
+            <span>-№2-</span>
+            <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </li>
-        <li class="point point-3">
-          <div class="color-gray">
-          <h3>Небольшая площадь</h3>
-          <span>-№3-</span>
-          <p>Все достопримечательности находятся очень близко</p>
+        <li class="point point-3 color-gray">
+          <div>
+            <h3>Небольшая площадь</h3>
+            <span>-№3-</span>
+            <p>Все достопримечательности находятся очень близко</p>
           </div>
         </li>
-        <li class="point point-4">
-          <div class="color-gray">
-          <h3>Красивая дорога</h3>
-          <span>-№4-</span>
-          <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <li class="point point-4 color-gray">
+          <div>
+            <h3>Красивая дорога</h3>
+            <span>-№4-</span>
+            <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
         </li>
-        <li class="point point-5">
-          <div class="color-gray">
-          <h3>Мало туристов</h3>
-          <span>-№5-</span>
-          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        <li class="point point-5 color-gray">
+          <div>
+            <h3>Мало туристов</h3>
+            <span>-№5-</span>
+            <p>Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </li>
       </ol>
     </section>
     <section class="main-search">
       <h2>Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-      <button class="button btn-brown" type="button">Поиск гостиницы в Седоне</button>
+      <p>Укажите предполагаемые даты поездки,<br>
+        и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <button class="form-call-button button btn-brown" type="button">Поиск гостиницы в Седоне</button>
       <div class="hotel-search">
-        <form action="https://echo.htmlacademy.ru" method="get">
-          <div>
-            <label for="arrivalDate">Дата заезда:</label>
-            <input id="arrivalDate" type="text" placeholder="24 апреля 2017" name="Arrival date">
-          </div>
-          <div>
-            <label for="dateOfDeparture">Дата выезда:</label>
-            <input id="dateOfDeparture" type="text" placeholder="4 июля 2017" name="Date of departure">
-          </div>
-          <div>
-            <label for="adults">Взрослые:</label>
-            <input id="adults" type="number" min="1" max="10" step="1" value="2" name="Number of adults">
-          </div>
-          <div>
-            <label for="children">Дети:</label>
-            <input id="children" type="number" min="0" max="10" step="1" value="0" name="Number of children">
-          </div>
-          <button class="button btn-blue" type="submit">Найти</button>
-        </form>
+        <div class="form-container">
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <div>
+              <label for="arrivalDate">Дата заезда:</label>
+              <input class="calendar-icon" id="arrivalDate" type="text" placeholder="24 апреля 2017" name="Arrival date">
+            </div>
+            <div>
+              <label for="dateOfDeparture">Дата выезда:</label>
+              <input class="calendar-icon" id="dateOfDeparture" type="text" placeholder="4 июля 2017" name="Date of departure">
+            </div>
+            <div class="input-number">
+              <label for="adults">Взрослые:</label>
+              <input id="adults" type="number" min="1" max="10" step="1" value="2" name="Number of adults">
+              <label for="children">Дети:</label>
+              <input id="children" type="number" min="0" max="10" step="1" value="0" name="Number of children">
+            </div>
+
+            <button class="button btn-blue" type="submit">Найти</button>
+
+          </form>
+        </div>
       </div>
     </section>
     <section>
