@@ -42,6 +42,7 @@ body{
   margin: auto;
   background-color: var(--basic-white);
   min-height: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden:not(:focus):not(:active){
@@ -74,6 +75,10 @@ ol{
 img{
   max-width: 100%;
   height: auto;
+}
+
+main{
+  margin-top: -15px;
 }
 
 h3,
@@ -139,16 +144,12 @@ h4{
 
 .site-navigation{
   margin: 0;
-  padding-top: 14px;
+  padding-top: 15px;
   width: auto;
   grid-column: 1/6;
   grid-row-start: 1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.site-navigation li{
-  text-align: center;
 }
 
 .main-navigation-logo{
@@ -194,42 +195,48 @@ a.active-link{
 .main-footer{
   line-height: 26px;
   color: var(--basic-black);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 15px;
-  padding-bottom: 36px;
+  opacity: 0.9;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .contact{
+  justify-self: center;
   text-align: center;
   font-weight: 700;
   font-size: 21px;
 }
 
-.contact p{
-  margin-top: 10px;
-}
-
 .social{
-  display: flex;
-  padding: 0;
   justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  margin: 5px;
+  width: 150px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .social a{
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 43px;
-  height: 43px;
-  margin: 6px;
+  width: 46px;
+  height: 48px;
 }
 
+.copyright{
+  justify-self: center;
+}
 
-
+.copyright svg{
+  position: relative;
+  top: 15px;
+}
 /*Index*/
 
 /*Page title*/
@@ -237,7 +244,7 @@ a.active-link{
 .main-title{
   background: url("../img/background.jpg") no-repeat center;
   text-align: center;
-  margin-top: -15px;
+  margin-bottom: 45px;
 }
 
 .main-title img{
@@ -257,7 +264,6 @@ a.active-link{
 
 .main-features{
   text-align: center;
-  margin-top: 40px;
 }
 
 .intro-title{
@@ -265,11 +271,12 @@ a.active-link{
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  margin-bottom: 40px;
 }
 
 .intro-subtitle{
   line-height: 26px;
-  margin-top: 45px;
+  margin-bottom: 55px;
 }
 
 .color-blue{
@@ -286,8 +293,6 @@ a.active-link{
 }
 
 .intro-list{
-  margin-top: 50px;
-  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: min-content min-content min-content min-content;
@@ -325,7 +330,8 @@ a.active-link{
 }
 
 .city-features{
-  padding: 60px;
+  padding-top: 30px;
+  padding-bottom: 60px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -333,7 +339,8 @@ a.active-link{
 .point-3,
 .point-4,
 .point-5{
-  padding: 50px;
+  padding-top: 50px;
+  padding-bottom: 75px;
 }
 
 .housing::before{
@@ -343,13 +350,13 @@ a.active-link{
 }
 
 .food::before{
-  content: url("../img/icon-2.svg");
+  content: url("../img/icon-3.svg");
   display: block;
   padding-bottom: 30px;
 }
 
 .souvenirs::before{
-  content: url("../img/icon-3.svg");
+  content: url("../img/icon-2.svg");
   display: block;
   padding-bottom: 30px;
 }
@@ -367,6 +374,7 @@ a.active-link{
 /*Search form*/
 
 .main-search{
+  position: relative;
   text-align: center;
   padding-top: 15px;
 }
@@ -392,7 +400,6 @@ a.active-link{
 .form-container{
   margin: 0px auto;
   width: 568px;
-  height: 395px;
   background-color: var(--basic-white);
 }
 
@@ -403,17 +410,52 @@ a.active-link{
 }
 
 .form-container div{
-  margin-top: 30px;
-  margin-bottom: 0px;
+  margin-bottom: 30px;
 }
 
 .form-container div:first-child{
   margin-top: 55px;
 }
 
+.form-container div:last-of-type{
+  margin-bottom: 55px;
+}
+
 .calendar-icon{
   background-image: url("../img/calendar.svg");
   background-position: 320px center;
+  background-repeat: no-repeat;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button{
+  display: none;
+}
+
+.input-number{
+  display: flex;
+  justify-content: space-between;
+  width: 458px;
+}
+
+.input-number p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.number{
+  text-align: center;
+}
+
+.icon-plus{
+  background-image: url("../img/plus-icon.svg");
+  background-position: 0px;
+  background-repeat: no-repeat;
+}
+
+.icon-minus{
+  background-image: url("../img/minus-icon.svg");
+  background-position: 10px;
   background-repeat: no-repeat;
 }
 
@@ -430,7 +472,6 @@ input[name="Number of children"]{
 }
 
 .hotel-search button{
-  margin-top: 45px;
   margin-bottom: 55px;
   padding: 16px 195px;
 }
@@ -458,7 +499,6 @@ input[name="Number of children"]{
 /*Hotel filter*/
 
 .hotel-filter{
-  margin-top: -15px;
   background: url("../img/background-filter.jpg") no-repeat center;
   color: var(--basic-white);
 }
@@ -540,7 +580,7 @@ fieldset{
 }
 
 .hotels li{
-  padding: 30px 73px;
+  padding: 25px 73px;
   border-bottom: 1px solid var(--border-gray);
 }
 
@@ -554,11 +594,26 @@ fieldset{
 }
 
 .hotel-photo{
-  margin-right: 20px;
+  margin-right: 30px;
+}
+
+.hotel-features{
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-info{
   display: flex;
+  align-items: flex-end;
+}
+
+.hotel-type{
+  margin-right: 30px;
+}
+
+.hotel-status{
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
 }
 

@@ -45,8 +45,7 @@
         <li class="point point-1">
           <div class="row-1 color-blue">
             <div class="city">
-              <h3>Настоящий<br>
-                городок</h3>
+              <h3>Настоящий городок</h3>
               <span>-№1-</span>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
@@ -74,8 +73,7 @@
 
           </div>
           <div>
-            <h3>Там есть<br>
-              Мост дьявола</h3>
+            <h3>Там есть Мост дьявола</h3>
             <span>-№2-</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
@@ -120,10 +118,14 @@
               <input class="calendar-icon" id="dateOfDeparture" type="text" placeholder="4 июля 2017" name="Date of departure">
             </div>
             <div class="input-number">
+              <p>
               <label for="adults">Взрослые:</label>
-              <input id="adults" type="number" min="1" max="10" step="1" value="2" name="Number of adults">
+              <input class="icon-plus icon-minus number" id="adults" type="number" min="1" max="10" step="1" value="2" name="Number of adults">
+              </p>
+              <p>
               <label for="children">Дети:</label>
-              <input id="children" type="number" min="0" max="10" step="1" value="0" name="Number of children">
+              <input class="icon-plus icon-minus number" id="children" type="number" min="0" max="10" step="1" value="0" name="Number of children">
+              </p>
             </div>
 
             <button class="button btn-blue" type="submit">Найти</button>
@@ -132,7 +134,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="map">
       <img src="img/map.png" width="1199" height="594" alt="Map">
     </section>
   </main>
