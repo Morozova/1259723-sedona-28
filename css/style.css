@@ -427,11 +427,6 @@ a.active-link{
   background-repeat: no-repeat;
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button{
-  display: none;
-}
-
 .input-number{
   display: flex;
   justify-content: space-between;
@@ -447,16 +442,10 @@ a.active-link{
   text-align: center;
 }
 
-.icon-plus{
-  background-image: url("../img/plus-icon.svg");
-  background-position: 0px;
-  background-repeat: no-repeat;
-}
-
 .icon-minus{
-  background-image: url("../img/minus-icon.svg");
-  background-position: 10px;
-  background-repeat: no-repeat;
+  background-image: url("../img/minus-icon.svg"), url("../img/plus-icon.svg");
+  background-position: 10px, 90px;
+  background-repeat: no-repeat, no-repeat;
 }
 
 input[name="Arrival date"],
@@ -630,21 +619,22 @@ fieldset{
 .stars{
   height: 17px;
   background-image: url("../img/star.svg");
-  background-repeat: repeat-x;
+  background-repeat: space;
+  background-size: 19px auto;
   margin-bottom: 47px;
   text-align: right;
 }
 
 .four-stars{
-  width: 72px;
+  width: 91px;
 }
 
 .three-stars{
-  width: 54px;
+  width: 66px;
 }
 
 .two-stars{
-  width: 36px;
+  width: 42px;
 }
 
 .hotel-rating{
