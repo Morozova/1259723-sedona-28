@@ -32,49 +32,66 @@
   </header>
   <main>
     <h1 class="visually-hidden">Гостиницы</h1>
-    <section class="hotel-filter">
+    <section class="hotel-selection-filter">
       <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="filter-amenities">
+        <fieldset class="hotel-amenities-filter">
           <legend>Инфраструктура:</legend>
           <ul>
-            <li>
-              <input id="choosePool" type="checkbox" name="Pool" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="choosePool" type="checkbox" name="Pool" checked>
               <label for="choosePool">Бассейн</label>
             </li>
-            <li>
-              <input id="chooseParking" type="checkbox" name="Parking">
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="chooseParking" type="checkbox" name="Parking">
               <label for="chooseParking">Парковка</label>
             </li>
-            <li>
-              <input id="chooseWiFi" type="checkbox" name="Wi-Fi">
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="chooseWiFi" type="checkbox" name="Wi-Fi">
               <label for="chooseWiFi">Wi-Fi</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-housing">
+        <fieldset class="hotel-type-filter">
           <legend>Тип жилья:</legend>
           <ul>
-            <li>
-              <input id="typeHotel" type="checkbox" name="Hotel" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="typeHotel" type="checkbox" name="Hotel" checked>
               <label for="typeHotel">Гостиница</label>
             </li>
-            <li>
-              <input id="typeMotel" type="checkbox" name="Motel" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="typeMotel" type="checkbox" name="Motel" checked>
               <label for="typeMotel">Мотель</label>
             </li>
-            <li>
-              <input id="typeApartments" type="checkbox" name="Apartments" checked>
+            <li class="filter-option">
+              <input class="visually-hidden filter-checkbox" id="typeApartments" type="checkbox" name="Apartments"
+                     checked>
               <label for="typeApartments">Апартаменты</label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="filter-price">
-          <legend>Стоимость в сутки (Р):</legend>
-          <span>от 0</span>
-          <span>до 3000</span>
-          <input type="range" min="0" max="3000" step="10" name="Price per day">
-        </fieldset>
-        <button class="filter-button" type="submit">Показать</button>
+        <div class="price-block">
+          <fieldset class="hotel-price-filter">
+            <legend>Стоимость в сутки (Р):</legend>
+            <div class="range-filter">
+              <div class="price-control">
+                <label class="min-price">
+                  от <input type="text" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  до <input type="text" name="max-price" value="3000">
+                </label>
+              </div>
+              <div class="range-control">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="filter-button" type="submit">Показать</button>
+        </div>
       </form>
     </section>
     <section class="hotel-sorting">
@@ -100,7 +117,7 @@
             </div>
             <div class="hotel-features">
               <a href="#" class="link">
-              <h3>Amara Resort & Spa</h3>
+                <h3>Amara Resort & Spa</h3>
               </a>
               <div class="info">
                 <span class="hotel-type">
@@ -133,7 +150,7 @@
             </div>
             <div class="hotel-features">
               <a href="#" class="link">
-              <h3>Desert Quail Inn</h3>
+                <h3>Desert Quail Inn</h3>
               </a>
               <div class="info">
                   <span class="hotel-type">
@@ -166,7 +183,7 @@
             </div>
             <div class="hotel-features">
               <a href="#" class="link">
-              <h3>Villas at Poco Diablo</h3>
+                <h3>Villas at Poco Diablo</h3>
               </a>
               <div class="info">
                   <span class="hotel-type">

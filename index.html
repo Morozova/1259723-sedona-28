@@ -44,7 +44,7 @@
       <ol class="intro-list">
         <li class="point point-1">
           <div class="row-1 color-blue">
-            <div class="city">
+            <div class="reason-wrapper city">
               <h3>Настоящий городок</h3>
               <span>-№1-</span>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
@@ -72,7 +72,7 @@
           <div class="img-bridge">
 
           </div>
-          <div>
+          <div class="reason-wrapper">
             <h3>Там есть Мост дьявола</h3>
             <span>-№2-</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -109,26 +109,54 @@
       <div class="hotel-search">
         <div class="form-container">
           <form action="https://echo.htmlacademy.ru" method="get">
-            <div>
-              <label for="arrivalDate">Дата заезда:</label>
-              <input class="calendar-icon" id="arrivalDate" type="text" placeholder="24 апреля 2017" name="Arrival date">
+            <div class="form-line checkin-date-field">
+              <label class="field-name" for="arrivalDate">Дата заезда:</label>
+              <input  id="arrivalDate" type="text" placeholder="24 апреля 2017"
+                     name="Arrival date">
+              <button class="calendar" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                <path
+                  d="M19.25 2.02h-2.84V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38h-3.93V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38H5.91V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38H1.75A1.8 1.8 0 000 3.86v16.3A1.8 1.8 0 001.75 22h17.5A1.8 1.8 0 0021 20.16V3.86a1.8 1.8 0 00-1.75-1.83zm.44 18.14a.45.45 0 01-.44.46H1.75a.45.45 0 01-.44-.46V3.86a.45.45 0 01.44-.46h2.84v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h3.93v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h3.93v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h2.84c.24 0 .44.2.44.46v16.3z"/>
+                <path
+                  d="M4.6 8.22h2.62v2.07H4.59zm0 3.45h2.62v2.06H4.59zm0 3.44h2.62v2.07H4.59zm4.59 0h2.62v2.07H9.2zm0-3.44h2.62v2.06H9.2zm0-3.45h2.62v2.07H9.2zm4.6 6.9h2.62v2.06h-2.63zm0-3.45h2.62v2.06h-2.63zm0-3.45h2.62v2.07h-2.63z"/>
+              </svg>
+              </button>
             </div>
-            <div>
-              <label for="dateOfDeparture">Дата выезда:</label>
-              <input class="calendar-icon" id="dateOfDeparture" type="text" placeholder="4 июля 2017" name="Date of departure">
+            <div class="form-line checkout-date-field">
+              <label class="field-name" for="dateOfDeparture">Дата выезда:</label>
+              <input id="dateOfDeparture" type="text" placeholder="4 июля 2017"
+                     name="Date of departure">
+              <button class="calendar" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22">
+                <path
+                  d="M19.25 2.02h-2.84V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38h-3.93V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38H5.91V.65c0-.38-.3-.7-.66-.7-.36 0-.66.32-.66.7v1.38H1.75A1.8 1.8 0 000 3.86v16.3A1.8 1.8 0 001.75 22h17.5A1.8 1.8 0 0021 20.16V3.86a1.8 1.8 0 00-1.75-1.83zm.44 18.14a.45.45 0 01-.44.46H1.75a.45.45 0 01-.44-.46V3.86a.45.45 0 01.44-.46h2.84v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h3.93v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h3.93v1.38c0 .38.3.69.66.69.36 0 .66-.3.66-.69V3.4h2.84c.24 0 .44.2.44.46v16.3z"/>
+                <path
+                  d="M4.6 8.22h2.62v2.07H4.59zm0 3.45h2.62v2.06H4.59zm0 3.44h2.62v2.07H4.59zm4.59 0h2.62v2.07H9.2zm0-3.44h2.62v2.06H9.2zm0-3.45h2.62v2.07H9.2zm4.6 6.9h2.62v2.06h-2.63zm0-3.45h2.62v2.06h-2.63zm0-3.45h2.62v2.07h-2.63z"/>
+              </svg>
+                </button>
             </div>
-            <div class="input-number">
-              <p>
-              <label for="adults">Взрослые:</label>
-              <input class="icon-plus icon-minus number" id="adults" type="text" placeholder="2" name="Number of adults">
-              </p>
-              <p>
-              <label for="children">Дети:</label>
-              <input class="icon-plus icon-minus number" id="children" type="text" placeholder="0" name="Number of children">
-              </p>
+            <div class="form-line number-of-people-field">
+                <label class="field-name" for="adults">Взрослые:</label>
+                <button class="button-minus sign-button" type="button">
+                  -
+                </button>
+                <input id="adults" type="text" placeholder="2"
+                       name="Number of adults">
+                <button class="button-plus sign-button" type="button">
+                  +
+                </button>
+                <label class="field-name number-of-children" for="children">Дети:</label>
+                <button class="button-minus sign-button" type="button">
+                  -
+                </button>
+                <input id="children" type="text" placeholder="0"
+                       name="Number of children">
+                <button class="button-plus sign-button" type="button">
+                  +
+                </button>
             </div>
 
-            <button class="button btn-blue" type="submit">Найти</button>
+            <button class="search-button button btn-blue" type="submit">Найти</button>
 
           </form>
         </div>
