@@ -34,42 +34,46 @@
     <h1 class="visually-hidden">Гостиницы</h1>
     <section class="hotel-selection-filter">
       <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset class="hotel-amenities-filter">
-          <legend>Инфраструктура:</legend>
-          <ul>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="choosePool" type="checkbox" name="Pool" checked>
-              <label for="choosePool">Бассейн</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="chooseParking" type="checkbox" name="Parking">
-              <label for="chooseParking">Парковка</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="chooseWiFi" type="checkbox" name="Wi-Fi">
-              <label for="chooseWiFi">Wi-Fi</label>
-            </li>
-          </ul>
+        <div class="fieldset">
+          <fieldset class="hotel-amenities-filter">
+            <legend>Инфраструктура:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="choosePool" type="checkbox" name="Pool" checked>
+                <label for="choosePool">Бассейн</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="chooseParking" type="checkbox" name="Parking">
+                <label for="chooseParking">Парковка</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="chooseWiFi" type="checkbox" name="Wi-Fi">
+                <label for="chooseWiFi">Wi-Fi</label>
+              </li>
+            </ul>
+        </div>
         </fieldset>
-        <fieldset class="hotel-type-filter">
-          <legend>Тип жилья:</legend>
-          <ul>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="typeHotel" type="checkbox" name="Hotel" checked>
-              <label for="typeHotel">Гостиница</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="typeMotel" type="checkbox" name="Motel" checked>
-              <label for="typeMotel">Мотель</label>
-            </li>
-            <li class="filter-option">
-              <input class="visually-hidden filter-checkbox" id="typeApartments" type="checkbox" name="Apartments"
-                     checked>
-              <label for="typeApartments">Апартаменты</label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="price-block">
+        <div class="fieldset">
+          <fieldset class="hotel-type-filter">
+            <legend>Тип жилья:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="typeHotel" type="checkbox" name="Hotel" checked>
+                <label for="typeHotel">Гостиница</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="typeMotel" type="checkbox" name="Motel" checked>
+                <label for="typeMotel">Мотель</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-checkbox" id="typeApartments" type="checkbox" name="Apartments"
+                       checked>
+                <label for="typeApartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <div class="fieldset price-block">
           <fieldset class="hotel-price-filter">
             <legend>Стоимость в сутки (Р):</legend>
             <div class="range-filter">
@@ -103,8 +107,16 @@
         <button class="sorting-button" type="button">По рейтингу</button>
       </div>
       <div>
-        <button type="button">&uarr;</button>
-        <button type="button">&darr;</button>
+        <button class="sort-type-button up-button" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+            <path d="M5.5 0L0 10h11z"/>
+          </svg>
+        </button>
+        <button class="sort-type-button active-button down-button" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+            <path d="M5.5 10L0 0h11"/>
+          </svg>
+        </button>
       </div>
     </section>
     <section class="hotel-list">

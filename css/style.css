@@ -193,7 +193,7 @@ a.active-link{
 /*Footer*/
 
 .main-footer{
-  padding: 20px 0px;
+  min-height: 120px;
   line-height: 26px;
   color: var(--basic-black);
   background-color: var(--basic-white);
@@ -203,10 +203,12 @@ a.active-link{
 }
 
 .contact{
+  justify-self: center;
   text-align: center;
   font-weight: 700;
   font-size: 21px;
   padding-left: 72px;
+  padding-top: 20px;
 }
 
 .contact p{
@@ -225,6 +227,10 @@ a.active-link{
   list-style: none;
 }
 
+.social li{
+  padding-bottom: 5px;
+}
+
 .social a{
   display: flex;
   align-items: center;
@@ -238,21 +244,29 @@ a.active-link{
 }
 
 .copyright{
-  padding-left: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 70px;
+  padding-bottom: 10px;
 }
 
-.copyright svg{
-  position: relative;
-  top: 15px;
-  right: -5px;
+.copyright p{
+  margin-right: 8px;
 }
 
-.copyright path:focus,
-.copyright path:hover{
+.copyright a{
+  display: inline-block;
+  width: 115px;
+  height: 40px;
+}
+
+.academy-link:focus path,
+.academy-link:hover path{
   fill: var(--basic-blue);
 }
 
-.copyright path:active{
+.academy-link:active path{
   fill: var(--active-gray);
 }
 
@@ -516,15 +530,11 @@ a.active-link{
 .form-container .sign-button:active{
   color: var(--basic-blue);
   background: #FFFFFF;
-  border: 2px solid #E5E5E5;
-  box-sizing: border-box;
 }
 
 .form-container .calendar:active{
   fill: var(--basic-blue);
   background: #FFFFFF;
-  border: 2px solid #E5E5E5;
-  box-sizing: border-box;
 }
 
 .number-of-people-field{
@@ -539,16 +549,22 @@ a.active-link{
 /*Map Section*/
 
 .map{
-  margin-bottom: -114px;
+  margin-bottom: -120px;
 }
 
 /*Hotels*/
 
 /*Hotel selection filter*/
 
+.fieldset{
+  padding-top: 25px;
+}
+
 .hotel-selection-filter{
   background: url("../img/background-filter.jpg") no-repeat center;
+  background-size: cover;
   color: var(--basic-white);
+  padding-top: 30px;
 }
 
 .hotel-selection-filter form{
@@ -669,10 +685,26 @@ a.active-link{
   margin: 5px;
 }
 
-
-
-
 /*Hotel sorting*/
+
+.sort-type-button{
+  border: none;
+  background: transparent;
+  fill: #CACACA;
+}
+
+.sort-type-button:focus,
+.sort-type-button:hover{
+  fill: var(--basic-black);
+}
+
+.sort-type-button:active{
+  fill: var(--basic-blue);
+}
+
+.active-button{
+  fill: var(--basic-blue);
+}
 
 .hotel-sorting{
   font-size: 12px;
