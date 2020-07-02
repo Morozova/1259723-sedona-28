@@ -240,7 +240,7 @@ a.active-link {
   height: 48px;
 }
 
-.social svg:active {
+.social a:active svg{
   opacity: 0.3;
 }
 
@@ -478,6 +478,12 @@ a.active-link {
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
+.hotel-search input::-moz-placeholder,
+.hotel-search input::-webkit-input-placeholder {
+  text-transform: uppercase;
+  opacity: 1;
+}
+
 .field-name {
   padding-top: 5px;
   display: block;
@@ -500,6 +506,7 @@ a.active-link {
   background-color: var(--background-gray);
   font: inherit;
   border: none;
+  box-sizing: border-box;
 }
 
 .hotel-search input:hover {
@@ -509,7 +516,7 @@ a.active-link {
 .hotel-search input:focus {
   background-color: var(--basic-white);
   border: 2px solid #E5E5E5;
-  box-sizing: border-box;
+  outline: none;
 }
 
 .checkin-date-field input,
@@ -651,6 +658,28 @@ a.active-link {
   background-position: 0 0;
 }
 
+.filter-checkbox:disabled + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/checkbox-off-block.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-checkbox:checked:disabled + label::after {
+  content: "";
+  position: absolute;
+  left: -35px;
+  width: 23px;
+  height: 23px;
+  background-image: url("../img/Shape-block.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 .hotel-amenities-filter {
   padding-left: 72px;
   margin-bottom: 8px;
@@ -734,6 +763,11 @@ a.active-link {
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
+}
+
+.range-control .toggle:hover,
+.range-control .toggle:focus{
+  transform: scale(1.2, 1.2);
 }
 
 .range-control .toggle-max {
