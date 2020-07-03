@@ -479,7 +479,8 @@ a.active-link {
 }
 
 .hotel-search input::-moz-placeholder,
-.hotel-search input::-webkit-input-placeholder {
+.hotel-search input::-webkit-input-placeholder,
+.hotel-search input::placeholder{
   text-transform: uppercase;
   opacity: 1;
 }
