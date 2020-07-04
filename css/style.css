@@ -472,17 +472,27 @@ a.active-link {
 }
 
 .form-container {
+  display: block;
   margin: 0px auto;
   width: 568px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
 }
 
-.hotel-search input::-moz-placeholder,
-.hotel-search input::-webkit-input-placeholder,
-.hotel-search input::placeholder{
+.hotel-search input::-webkit-input-placeholder {
   text-transform: uppercase;
   opacity: 1;
+  color: #000;
+}
+.hotel-search input::-moz-placeholder {
+  text-transform: uppercase;
+  opacity: 1;
+  color: #000;
+}
+.hotel-search input::placeholder {
+  text-transform: uppercase;
+  opacity: 1;
+  color: #000;
 }
 
 .field-name {
@@ -588,6 +598,10 @@ a.active-link {
 .search-button {
   margin-bottom: 50px;
   padding: 16px 195px;
+}
+
+.modal-show{
+  display: none;
 }
 
 /*Map Section*/
@@ -877,38 +891,31 @@ a.active-link {
 
 .hotels {
   padding: 0;
+  margin: 0;
 }
 
 .hotels li {
-  padding: 25px 73px;
+  display: flex;
+  justify-content: space-between;
   border-bottom: 1px solid var(--border-gray);
+  padding: 30px 72px 25px 73px;
 }
 
 .hotels li:first-child {
   border-top: 1px solid var(--border-gray);
 }
 
-.hotels li {
-  display: flex;
-  justify-content: space-between;
-}
-
 .hotel-photo {
-  margin-right: 30px;
-}
-
-.hotel-features {
-  display: flex;
-  flex-direction: column;
+  margin-right: 29px;
 }
 
 .hotel-info {
   display: flex;
-  align-items: flex-end;
 }
 
 .hotel-type {
-  margin-right: 30px;
+  display: inline-block;
+  width: 110px;
 }
 
 .hotel-status {
@@ -919,8 +926,8 @@ a.active-link {
 
 .hotel-list h3 {
   line-height: 26px;
-  margin-top: 0px;
-  margin-bottom: 10px;
+  margin-top: -8px;
+  margin-bottom: 9px;
 }
 
 .info {
@@ -955,11 +962,11 @@ a.active-link {
 }
 
 .more-details {
-  padding: 5px 15px;
+  padding: 5px 17px;
 }
 
 .book {
-  padding: 6px 15px;
+  padding: 6px 17px;
 }
 
 
