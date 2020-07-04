@@ -668,7 +668,7 @@ a.active-link {
   left: -35px;
   width: 23px;
   height: 23px;
-  background-image: url("../img/Shape.svg");
+  background-image: url("../img/checkmark.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -690,7 +690,7 @@ a.active-link {
   left: -35px;
   width: 23px;
   height: 23px;
-  background-image: url("../img/Shape-block.svg");
+  background-image: url("../img/checkmark-block.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
